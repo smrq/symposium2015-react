@@ -12,6 +12,7 @@ const slides = [
 	require('./containers/VirtualDom'),
 	require('./containers/ThrowAwayAngular'),
 	require('./containers/ComponentsPlusDirectives'),
-	require('./containers/ReactNative')
+	require('./containers/ReactNative'),
+	require('./containers/TheEnd')
 ];
 export default slides;
