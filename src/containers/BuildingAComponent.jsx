@@ -39,29 +39,29 @@ export default class BuildingAComponent extends Component {
 				backgroundColor: 'white',
 				transition: 'opacity 0.5s ease'
 			}} />
-			<div style={{fontSize: '0.9em'}}>
+			<div style={{fontSize: '0.9em', position: 'relative'}}>
 				<CodeTyper src={click >= 2 ? src : ''} />
+				<div style={{ 
+					position: 'absolute',
+					left: 0,
+					right: 0,
+					top: 0,
+					height: '1.75em',
+					opacity: click >= 3 ? 0.9 : 0,
+					backgroundColor: 'white',
+					transition: 'opacity 0.5s ease'
+				}} />
+				<div style={{ 
+					position: 'absolute',
+					left: 0,
+					right: 0,
+					top: '3em',
+					bottom: 0,
+					opacity: click >= 3 ? 0.9 : 0,
+					backgroundColor: 'white',
+					transition: 'opacity 0.5s ease'
+				}} />
 			</div>
-			<div style={{ 
-				position: 'absolute',
-				left: 0,
-				right: 0,
-				top: 390,
-				height: '1em',
-				opacity: click >= 3 ? 0.9 : 0,
-				backgroundColor: 'white',
-				transition: 'opacity 0.5s ease'
-			}} />
-			<div style={{ 
-				position: 'absolute',
-				left: 0,
-				right: 0,
-				top: 435,
-				bottom: 0,
-				opacity: click >= 3 ? 0.9 : 0,
-				backgroundColor: 'white',
-				transition: 'opacity 0.5s ease'
-			}} />
 		</div>;
 	}
 }

@@ -4,7 +4,8 @@ import * as ngReact from 'ngReact';
 
 export class AccountManagerCard ... { ... }
 
-export function duelAccountManagerCard(reactDirective: ngReact.IReactDirectiveService)
+export function duelAccountManagerCard(
+	reactDirective: ngReact.IReactDirectiveService)
 	: ng.IDirective
 {
 	'ngInject';

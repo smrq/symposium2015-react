@@ -27,7 +27,7 @@ export default class ReactNative extends Component {
 		const { click } = this.state;
 
 		return <div>
-			<h1>React Native</h1>
+			<h1>React Native!!!</h1>
 			<ul>
 				<li style={{opacity: click >= 1 ? 1 : 0, textDecoration: click >= 2 ? 'line-through' : 'none'}}>Write once, run anywhere</li>
 				<li style={{opacity: click >= 2 ? 1 : 0}}>Learn once, write anywhere</li>

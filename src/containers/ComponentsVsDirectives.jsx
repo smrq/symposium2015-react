@@ -16,13 +16,13 @@ export default class ComponentsVsDirectives extends Component {
 				<CodeTyper src={ componentSrc } />
 				<div style={{opacity: click >= 3 ? 1 : 0}}>
 					<div style={{opacity: 0.9, backgroundColor: '#23241f', position: 'absolute', left: 0, right: 0, top: 0, height: '6.25em'}} />
-					<div style={{opacity: 0.9, backgroundColor: '#23241f', position: 'absolute', left: 0, right: 0, top: '15.5em', bottom: 0}} />
+					<div style={{opacity: 0.9, backgroundColor: '#23241f', position: 'absolute', left: 0, right: 0, top: '15.25em', bottom: 0}} />
 				</div>
 			</div>
 			<div style={{float: 'left', width: '50%', fontSize: '0.5em', position: 'relative', opacity: click >= 2 ? 1 : 0}}>
 				<CodeTyper src={ directiveSrc } />
 				<div style={{opacity: click >= 3 ? 1 : 0}}>
-					<div style={{opacity: 0.9, backgroundColor: '#23241f', position: 'absolute', left: 0, right: 0, top: 0, height: '18em'}} />
+					<div style={{opacity: 0.9, backgroundColor: '#23241f', position: 'absolute', left: 0, right: 0, top: 0, height: '18.5em'}} />
 					<div style={{opacity: 0.9, backgroundColor: '#23241f', position: 'absolute', left: 0, right: 0, top: '25em', bottom: 0}} />
 				</div>
 			</div>

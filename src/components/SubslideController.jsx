@@ -1,10 +1,11 @@
 import React, { Component, PropTypes } from 'react';
 import * as Keys from '../constants/Keys';
+import { contains } from 'lodash';
 
 export default class SubslideController extends Component {
 	static defaultProps = {
-		prevKey: Keys.UP,
-		nextKey: Keys.DOWN
+		prevKeys: [Keys.UP],
+		nextKeys: [Keys.DOWN]
 	};
 
 	constructor(props) {
@@ -25,17 +26,18 @@ export default class SubslideController extends Component {
 	}
 
 	handleKeyDown(e) {
-		const { prevKey, nextKey, prev, next } = this.props;
-		switch (e.which) {
-			case prevKey:
-				prev();
-				break;
-			case nextKey:
-				next();
-				break;
-			default:
-				return;
+		const { prevKeys, nextKeys, prev, next } = this.props;
+
+		if (contains(prevKeys, e.which)) {
+			prev();
 		}
+		else if (contains(nextKeys, e.which)) {
+			next();
+		}
+		else {
+			return;
+		}
+
 		e.preventDefault();
 	}
 }

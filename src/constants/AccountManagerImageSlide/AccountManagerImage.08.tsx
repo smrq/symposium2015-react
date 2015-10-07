@@ -1,6 +1,7 @@
 import * as React from 'react';
 
-export default class AccountManagerImage extends React.Component<IAccountManagerImageProps, {}> {
+export default class AccountManagerImage extends
+React.Component<IAccountManagerImageProps, {}> {
 	render() {
 		return <div className='am-image'>
 			{ this.renderImageOrInitials() }

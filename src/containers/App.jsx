@@ -35,8 +35,8 @@ export default class App extends Component {
 				{ this.renderChildren() }
 			</CSSTransitionGroup>
 			<SubslideController
-				prevKey={Keys.LEFT}
-				nextKey={Keys.RIGHT}
+				prevKeys={[Keys.LEFT]}
+				nextKeys={[Keys.RIGHT]}
 				prev={this.prev.bind(this)}
 				next={this.next.bind(this)} />
 		</div>;
