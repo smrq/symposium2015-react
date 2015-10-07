@@ -1,5 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import CodeTyper from '../components/CodeTyper';
+import LightenCodeLines from '../components/LightenCodeLines';
 import slide from '../decorators/slide';
 
 const componentSrc = require('!!raw!../constants/ComponentsVsDirectives/Component.tsx');
@@ -14,17 +15,21 @@ export default class ComponentsVsDirectives extends Component {
 			<h1>Components? You mean directives?</h1>
 			<div style={{float: 'left', width: '50%', fontSize: '0.8em', position: 'relative', opacity: click >= 1 ? 1 : 0}}>
 				<CodeTyper src={ componentSrc } />
-				<div style={{opacity: click >= 3 ? 1 : 0}}>
-					<div style={{opacity: 0.9, backgroundColor: '#23241f', position: 'absolute', left: 0, right: 0, top: 0, height: '6.25em'}} />
-					<div style={{opacity: 0.9, backgroundColor: '#23241f', position: 'absolute', left: 0, right: 0, top: '15.25em', bottom: 0}} />
-				</div>
+				<LightenCodeLines lines={5} color='#23241f' show={click >= 3} style={{
+					position: 'absolute', left: 0, right: 0, top: 0, margin: '0.5em 0'
+				}} />
+				<LightenCodeLines lines={10} color='#23241f' show={click >= 3} style={{
+					position: 'absolute', left: 0, right: 0, bottom: 0, margin: '0.5em 0'
+				}} />
 			</div>
 			<div style={{float: 'left', width: '50%', fontSize: '0.5em', position: 'relative', opacity: click >= 2 ? 1 : 0}}>
 				<CodeTyper src={ directiveSrc } />
-				<div style={{opacity: click >= 3 ? 1 : 0}}>
-					<div style={{opacity: 0.9, backgroundColor: '#23241f', position: 'absolute', left: 0, right: 0, top: 0, height: '18.5em'}} />
-					<div style={{opacity: 0.9, backgroundColor: '#23241f', position: 'absolute', left: 0, right: 0, top: '25em', bottom: 0}} />
-				</div>
+				<LightenCodeLines lines={15} color='#23241f' show={click >= 3} style={{
+					position: 'absolute', left: 0, right: 0, top: 0, margin: '0.5em 0'
+				}} />
+				<LightenCodeLines lines={24} color='#23241f' show={click >= 3} style={{
+					position: 'absolute', left: 0, right: 0, bottom: 0, margin: '0.5em 0'
+				}} />
 			</div>
 		</div>;
 	}
