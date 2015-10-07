@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import { Router, Route, IndexRoute } from 'react-router';
 import createBrowserHistory from 'history/lib/createBrowserHistory';
-import { padLeft } from 'lodash';
+import padLeft from 'lodash/string/padLeft';
 
 import App from './App';
 import slides from '../slides';

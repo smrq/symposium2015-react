@@ -1,8 +1,6 @@
 import React from 'react';
 import SubslideController from '../components/SubslideController';
 
-function noop() {}
-
 export default function slideDecorator(color = 'dark') {
 	return function createSlide(component) {
 		return class SlideComponent extends component {

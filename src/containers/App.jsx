@@ -1,6 +1,6 @@
 import React, { Children, Component, PropTypes } from 'react';
 import 'react/addons';
-import { padLeft } from 'lodash';
+import padLeft from 'lodash/string/padLeft';
 import * as Keys from '../constants/Keys';
 import slides from '../slides';
 import SubslideController from '../components/SubslideController';

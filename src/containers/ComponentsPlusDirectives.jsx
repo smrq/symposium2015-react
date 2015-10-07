@@ -12,8 +12,6 @@ const srcList = [
 @slide('dark')
 export default class ComponentsPlusDirectives extends Component {
 	render() {
-		const { src, setSrc } = this.props;
-
 		return <div>
 			<h1>Components + directives = <strong>{'<3'}</strong></h1>
 			<CodeTyper src={this.getSrc()} />

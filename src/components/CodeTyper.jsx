@@ -63,7 +63,6 @@ export default class CodeTyper extends Component {
 	}
 
 	typeCharacter() {
-		const { src } = this.props;
 		const { typedSrc, diff, cursor } = this.state;
 
 		if (!diff.length) return;

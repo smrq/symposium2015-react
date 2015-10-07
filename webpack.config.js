@@ -1,8 +1,9 @@
 const path = require('path');
+const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const NpmImportPlugin = require('less-plugin-npm-import');
 
-module.exports = {
+const config = {
 	entry: [ './src/main' ],
 	output: {
 		path: path.join(__dirname, 'dist'),
@@ -28,3 +29,11 @@ module.exports = {
 		]
 	}
 };
+
+if (process.env.NODE_ENV === 'production') {
+	config.plugins.push(new webpack.optimize.OccurrenceOrderPlugin());
+	config.plugins.push(new webpack.optimize.UglifyJsPlugin());
+	delete config.devtool;
+}
+
+module.exports = config;

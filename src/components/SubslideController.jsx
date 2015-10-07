@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
+import contains from 'lodash/collection/includes';
 import * as Keys from '../constants/Keys';
-import { contains } from 'lodash';
 
 export default class SubslideController extends Component {
 	static defaultProps = {
