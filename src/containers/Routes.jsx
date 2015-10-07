@@ -1,12 +1,12 @@
 import React, { Component, PropTypes } from 'react';
 import { Router, Route, IndexRoute } from 'react-router';
-import createBrowserHistory from 'history/lib/createBrowserHistory';
+import { createHashHistory } from 'history';
 import padLeft from 'lodash/string/padLeft';
 
 import App from './App';
 import slides from '../slides';
 
-const history = createBrowserHistory();
+const history = createHashHistory();
 
 function getSlidePath(number) {
 	return '/' + padLeft(number, 2, '0');
